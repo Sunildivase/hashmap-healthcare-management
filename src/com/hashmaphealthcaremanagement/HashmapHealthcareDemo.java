@@ -34,12 +34,17 @@ public class HashmapHealthcareDemo {
                     PersonService personService = new PersonService();
                     personService.createPerson();
                     personService.displayPerson();
+                    personService.deletePerson(1);
+                    personService.deleteAllPerson();
                     System.out.println("person created successfully");
                     break;
 
                 case 2:
                     DoctorService doctorService =new DoctorService();
-
+                    doctorService.createDoctor();
+                    doctorService.displayDoctor();
+                    doctorService.deleteDoctor(1);
+                    doctorService.deleteAllDoctor();
                     System.out.println("doctor created successfully");
             }
 

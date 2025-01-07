@@ -2,19 +2,19 @@ package com.hashmaphealthcaremanagement.service;
 
 import com.hashmaphealthcaremanagement.model.Person;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Scanner;
+import java.util.*;
 
 public class PersonService {
 
-    private static HashSet<Person> persons = new HashSet<>();
+    private static HashMap<Integer,Person> persons = new HashMap<>();
 
     private static Scanner scanner = new Scanner(System.in);
 
     void printPerson(Person person){
         System.out.println(person);
     }
+
+
     public Person createPerson(){
 
         System.out.println("please enter id");
@@ -55,12 +55,23 @@ public class PersonService {
         person.setAlternateMobile(alternateMobile);
         person.setAddress(address);
 
-        persons.add(person);
+        persons.put(1,person);
         return person;
     }
     public void displayPerson(){
-     for(Object person: persons){
-         System.out.println("person created: "+person);
+        Set<Map.Entry<Integer, Person>> entrySet = persons.entrySet();
+        for(Map.Entry<Integer, Person> entry : entrySet){
+            System.out.println("key: " +entry.getKey()+"| value: " +entry.getValue());
+        }
+     }
+
+     public Person deletePerson(int personId){
+        Person removedPerson =persons.remove(personId);
+         System.out.println("removed person: "+removedPerson);
+         return removedPerson;
+     }
+     public void deleteAllPerson(){
+        persons.clear();
      }
     }
-}
+
