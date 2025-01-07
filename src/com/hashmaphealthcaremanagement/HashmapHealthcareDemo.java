@@ -2,6 +2,7 @@ package com.hashmaphealthcaremanagement;
 
 import com.hashmaphealthcaremanagement.model.Person;
 import com.hashmaphealthcaremanagement.service.DoctorService;
+import com.hashmaphealthcaremanagement.service.HospitalService;
 import com.hashmaphealthcaremanagement.service.PersonService;
 
 import java.util.HashMap;
@@ -46,6 +47,16 @@ public class HashmapHealthcareDemo {
                     doctorService.deleteDoctor(1);
                     doctorService.deleteAllDoctor();
                     System.out.println("doctor created successfully");
+                    break;
+
+                case 3:
+                    HospitalService hospitalService = new HospitalService();
+                    hospitalService.createHospital();
+                    hospitalService.displayHospital();
+                    hospitalService.deleteHospital(1);
+                    hospitalService.deleteAllHospital();
+
+                    System.out.println("hospital created successfully");
             }
 
         }while(option!=0);{
