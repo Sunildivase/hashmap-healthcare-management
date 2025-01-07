@@ -4,29 +4,29 @@ import java.util.Objects;
 
 public class Appointment {
 
-    private int aId;
+    private int appointmentId;
     private int PersonId;
     private int doctorId;
-    private int hId;
+    private int hospitalId;
     private int deptId;
 
     @Override
     public String toString() {
         return "Appointment{" +
-                "aId=" + aId +
+                "appointmentId=" + appointmentId +
                 ", PersonId=" + PersonId +
                 ", doctorId=" + doctorId +
-                ", hId=" + hId +
+                ", hospitalId=" + hospitalId +
                 ", deptId=" + deptId +
                 '}';
     }
 
-    public int getaId() {
-        return aId;
+    public int getAppointmentId() {
+        return appointmentId;
     }
 
-    public void setaId(int aId) {
-        this.aId = aId;
+    public void setAppointmentId(int appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
     public int getPersonId() {
@@ -45,12 +45,12 @@ public class Appointment {
         this.doctorId = doctorId;
     }
 
-    public int gethId() {
-        return hId;
+    public int getHospitalId() {
+        return hospitalId;
     }
 
-    public void sethId(int hId) {
-        this.hId = hId;
+    public void setHospitalId(int hospitalId) {
+        this.hospitalId = hospitalId;
     }
 
     public int getDeptId() {
@@ -66,11 +66,11 @@ public class Appointment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Appointment that = (Appointment) o;
-        return getaId() == that.getaId() && getPersonId() == that.getPersonId() && getDoctorId() == that.getDoctorId() && gethId() == that.gethId() && getDeptId() == that.getDeptId();
+        return getAppointmentId() == that.getAppointmentId() && getPersonId() == that.getPersonId() && getDoctorId() == that.getDoctorId() && getHospitalId() == that.getHospitalId() && getDeptId() == that.getDeptId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getaId(), getPersonId(), getDoctorId(), gethId(), getDeptId());
+        return Objects.hash(getAppointmentId(), getPersonId(), getDoctorId(), getHospitalId(), getDeptId());
     }
 }

@@ -1,9 +1,7 @@
 package com.hashmaphealthcaremanagement;
 
 import com.hashmaphealthcaremanagement.model.Person;
-import com.hashmaphealthcaremanagement.service.DoctorService;
-import com.hashmaphealthcaremanagement.service.HospitalService;
-import com.hashmaphealthcaremanagement.service.PersonService;
+import com.hashmaphealthcaremanagement.service.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,6 +24,11 @@ public class HashmapHealthcareDemo {
             System.out.println("-----------------healthcare-management-system------------------");
             System.out.println("1. create person");
             System.out.println("2. create doctor");
+            System.out.println("3. create Hospital");
+            System.out.println("4. create department");
+            System.out.println("5. create appointment");
+            System.out.println("6. create prescription");
+            System.out.println("7. create billing");
 
             System.out.println("please enter the option");
             option = Integer.parseInt(scanner.nextLine());
@@ -55,8 +58,26 @@ public class HashmapHealthcareDemo {
                     hospitalService.displayHospital();
                     hospitalService.deleteHospital(1);
                     hospitalService.deleteAllHospital();
-
                     System.out.println("hospital created successfully");
+                    break;
+
+                case 4:
+                    DepartmentService departmentService = new DepartmentService();
+                    departmentService.createDepartment();
+                    departmentService.displayDepartment();
+                    departmentService.deleteDepartment(1);
+                    departmentService.deleteAllDepartment();
+                    System.out.println("department created successfully");
+                    break;
+
+                case 5:
+                    AppointmentService appointmentService = new AppointmentService();
+                    appointmentService.createAppointment();
+                    appointmentService.displayAppointment();
+                    appointmentService.deleteAppointment(1);
+                    appointmentService.deleteAllAppointment();
+                    System.out.println("appointment created successfully");
+                    break;
             }
 
         }while(option!=0);{
