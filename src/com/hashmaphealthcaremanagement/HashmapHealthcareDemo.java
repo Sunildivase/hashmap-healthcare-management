@@ -78,6 +78,11 @@ public class HashmapHealthcareDemo {
                     appointmentService.deleteAllAppointment();
                     System.out.println("appointment created successfully");
                     break;
+
+                case 6:
+
+                    System.out.println("prescription created successfully");
+
             }
 
         }while(option!=0);{

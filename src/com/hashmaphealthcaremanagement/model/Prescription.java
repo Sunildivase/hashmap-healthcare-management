@@ -4,25 +4,25 @@ import java.util.Objects;
 
 public class Prescription {
 
-    private int pId;
+    private int prescriptionId;
     private int personId;
-    private String pDetails;
+    private String prescriptionDetails;
 
     @Override
     public String toString() {
         return "Prescription{" +
-                "pId=" + pId +
+                "prescriptionId=" + prescriptionId +
                 ", personId=" + personId +
-                ", pDetails='" + pDetails + '\'' +
+                ", prescriptionDetails='" + prescriptionDetails + '\'' +
                 '}';
     }
 
-    public int getpId() {
-        return pId;
+    public int getPrescriptionId() {
+        return prescriptionId;
     }
 
-    public void setpId(int pId) {
-        this.pId = pId;
+    public void setPrescriptionId(int prescriptionId) {
+        this.prescriptionId = prescriptionId;
     }
 
     public int getPersonId() {
@@ -33,12 +33,12 @@ public class Prescription {
         this.personId = personId;
     }
 
-    public String getpDetails() {
-        return pDetails;
+    public String getPrescriptionDetails() {
+        return prescriptionDetails;
     }
 
-    public void setpDetails(String pDetails) {
-        this.pDetails = pDetails;
+    public void setPrescriptionDetails(String prescriptionDetails) {
+        this.prescriptionDetails = prescriptionDetails;
     }
 
     @Override
@@ -46,11 +46,11 @@ public class Prescription {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Prescription that = (Prescription) o;
-        return getpId() == that.getpId() && getPersonId() == that.getPersonId() && Objects.equals(getpDetails(), that.getpDetails());
+        return getPrescriptionId() == that.getPrescriptionId() && getPersonId() == that.getPersonId() && Objects.equals(getPrescriptionDetails(), that.getPrescriptionDetails());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getpId(), getPersonId(), getpDetails());
+        return Objects.hash(getPrescriptionId(), getPersonId(), getPrescriptionDetails());
     }
 }
