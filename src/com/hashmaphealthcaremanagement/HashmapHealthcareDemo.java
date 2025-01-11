@@ -80,9 +80,25 @@ public class HashmapHealthcareDemo {
                     break;
 
                 case 6:
-
+                    PrescriptionService prescriptionService = new PrescriptionService();
+                    prescriptionService.createPrescription();
+                    prescriptionService.displayPrescription();
+                    prescriptionService.deletePrescription(1);
+                    prescriptionService.deleteAllPrescription();
                     System.out.println("prescription created successfully");
+                    break;
 
+                case 7:
+                    BillingService billingService = new BillingService();
+                    billingService.createBilling();
+                    billingService.displayBilling();
+                    billingService.deleteBilling(1);
+                    billingService.deleteAllBilling();
+                    System.out.println("bill created successfully");
+                    break;
+
+                default:
+                    System.out.println("invalid input please enter valid details");
             }
 
         }while(option!=0);{
