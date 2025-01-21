@@ -2,7 +2,7 @@
 code using Hashmap;>
 # Project Name : - healthcare-management-system.
 Project Overview
-The Core Java IF healthcare Management Project is a basic Java application that demonstrates a Appointment booking management system. It utilizes object-oriented programming principles and simulates the interactions between persons, doctors, hospitals , and appointments.
+The Core Java HASHMAP healthcare Management Project is a basic Java application that demonstrates a Appointment booking management system. It utilizes object-oriented programming principles and simulates the interactions between persons, doctors, hospitals , and appointments.
 
 # Features
 Manage  for persons and doctors.
